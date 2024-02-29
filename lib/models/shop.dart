@@ -6,14 +6,14 @@ class Shop with ChangeNotifier {
 
   final List<Product> _shop = [
     Product(
-        descripition: 'Item DDescripition is here , more description more writhing to descripition here. ............',
+        descripition: 'Perfect timepiece for both men and women with our selection of the best watches',
         // imagePath: imagePath,
         name: "Watch for Men",
         price: 99.99,
         imagePath: 'images/product1.png'
     ),
     Product(
-        descripition: 'Item DDescripition is here ...',
+        descripition: 'Nike\'s first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270.',
         // imagePath: imagePath,
         name: "Blue Eco Shoes for Kids",
         price: 99.99,
