@@ -18,9 +18,29 @@ class ShopScreen extends StatelessWidget {
           title: Text("Shop"),
           centerTitle: true,
           actions: [
-            IconButton(
-                onPressed: () => Navigator.pushNamed(context, '/cart_screen'),
-                icon: Icon(Icons.shopping_cart_outlined))
+            Consumer<Shop>(builder: (context , value , child) {
+              return Stack(
+                children: [
+                  IconButton(
+                      onPressed: () => Navigator.pushNamed(context, '/cart_screen'),
+                      icon: Icon(Icons.shopping_cart_outlined,size: 30,)),
+                  value.cart.isEmpty ? SizedBox() : Positioned(
+                    right: 12,
+                    bottom: 40,
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 16.0,
+                      height:16.0,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(value.cart.length.toString(),style: TextStyle(color: Colors.white)),
+                    ),
+                  )
+                ],
+              );
+            })
           ],
         ),
         drawer: MyDrawer(),
