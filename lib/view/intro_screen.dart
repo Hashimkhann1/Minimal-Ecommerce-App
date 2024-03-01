@@ -21,7 +21,7 @@ class IntroScreen extends StatelessWidget {
             ),
             const SizedBox(height: 25,),
             // subtitle
-            Text("Minimal Shop",style: TextStyle(
+            Text("Ecom Shop",style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20
             ),),
